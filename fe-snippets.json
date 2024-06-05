@@ -1,0 +1,238 @@
+{
+  "TODO CSS Comment": {
+    "scope": "css,scss,less",
+    "prefix": "tdc",
+    "body": ["/* TODO: $0 */"],
+    "description": "Adds a todo comment in CSS, SCSS and LESS files"
+  },
+  "CSS Region": {
+    "scope": "css,scss,less",
+    "prefix": "creg",
+    "body": ["/* #region $1 */", "", "$2", "", "/* #endregion */"],
+    "description": "Creates a FOLDABLE REGION for code between region comments in CSS, SCSS and LESS files"
+  },
+  "Media Query": {
+    "scope": "css,scss,less",
+    "prefix": "mq",
+    "body": [
+      "@media (${1}-width: ${2}px) {",
+      "  .myClass {",
+      "    $3",
+      "  }",
+      "}"
+    ],
+    "description": "Generic code for media query"
+  },
+  "Mobile Media Query": {
+    "scope": "css,scss,less",
+    "prefix": "mmq",
+    "body": [
+      "@media (max-width: 767px) {",
+      "  .$1 {",
+      "    $2",
+      "  }",
+      "}"
+    ],
+    "description": "Media query for mobile devices"
+  },
+  "Tablet Media Query": {
+    "scope": "css,scss,less",
+    "prefix": "tmq",
+    "body": [
+      "@media (max-width: 1024px) {",
+      "  .$1 {",
+      "    $2",
+      "  }",
+      "}"
+    ],
+    "description": "Media query for small laptop or tablet devices including mobiles as well"
+  },
+  "Tablet Only Media Query": {
+    "scope": "css,scss,less",
+    "prefix": "tomq",
+    "body": [
+      "@media (min-width: 768px) and (max-width: 1024px) {",
+      "  .$1 {",
+      "    $2",
+      "  }",
+      "}"
+    ],
+    "description": "Media query for small laptop or tablet devices only"
+  },
+  "Desktop Media Query": {
+    "scope": "css,scss,less",
+    "prefix": "dmq",
+    "body": [
+      "@media (min-width: 1025px) {",
+      "  .$1 {",
+      "    $2",
+      "  }",
+      "}"
+    ],
+    "description": "Media query for desktop/laptop"
+  },
+  "Absolute Center": {
+    "scope": "css,scss,less",
+    "prefix": "center",
+    "body": [
+      "position: absolute",
+      "inset: 0;",
+      "margin: auto;"
+    ],
+    "description": "Center an item vertically and horizontally"
+  },
+  "console info": {
+    "scope": "javascript,typescript,typescriptreact,jsx",
+    "prefix": "cif",
+    "body": "console.info('$1:', $1);",
+    "description": "Prints console info"
+  },
+  "console log": {
+    "scope": "javascript,typescript,typescriptreact,jsx",
+    "prefix": "clg",
+    "body": "console.log('$1:', $1);",
+    "description": "Prints console log"
+  },
+  "TODO JS Comment": {
+    "scope": "javascript,typescript,typescriptreact",
+    "prefix": "td",
+    "body": ["// TODO: $0"],
+    "description": "Adds a todo comment in JS, TS and React TS files"
+  },
+  "JS Region": {
+    "scope": "javascript,typescript,typescriptreact,jsx,tsx",
+    "prefix": "jreg",
+    "body": ["// #region Code Start $1", "", "$2", "", "// #endregion"],
+    "description": "Creates a FOLDABLE REGION for code between region comments in JS, TS, JSX files"
+  },
+  "Import React": {
+    "scope": "javascript,typescript,typescriptreact",
+    "prefix": "imprt",
+    "body": ["import React from 'react'"],
+    "description": "Imports react in file"
+  },
+  "React Basic Functional Component": {
+    "scope": "typescriptreact,jsx",
+    "prefix": "rbfc",
+    "body": [
+      "import React, { FC } from 'react';",
+      "",
+      "export const $1:FC = () => (",
+      "  <div>Hello</div>",
+      ");",
+      "",
+      "$1.displayName = '$1';",
+      ""
+    ],
+    "description": "Creates a basic react function component"
+  },
+  "React Basic Functional Component with Interface": {
+    "scope": "typescriptreact",
+    "prefix": "rbfci",
+    "body": [
+      "import React, { FC } from 'react';",
+      "",
+      "interface $1Props {",
+      "  className?: string;",
+      "};",
+      "",
+      "export const $1:FC<I$1Props> = () => {",
+      "  const x = '';",
+      "",
+      "  return (",
+      "    <div>Hello</div>",
+      "  );",
+      "};",
+      "",
+      "$1.displayName = '$1';",
+      ""
+    ],
+    "description": "Creates a basic react function component in typescript with props defined as an interface"
+  },
+  "React Basic Functional Component with Type": {
+    "scope": "typescriptreact",
+    "prefix": "rbfct",
+    "body": [
+      "import React, { FC } from 'react';",
+      "",
+      "type $1Props = {",
+      "  className?: string;",
+      "};",
+      "",
+      "export const $1:FC<I$1Props> = ({ className }) => {",
+      "  const x = '';",
+      "",
+      "  return (",
+      "    <div>Hello</div>",
+      "  );",
+      "};",
+      "",
+      "$1.displayName = '$1';",
+      ""
+    ],
+    "description": "Creates a basic react function component in typescript with props defined as a type"
+  },
+  "React useState": {
+    "scope": "typescriptreact,jsx",
+    "prefix": "us",
+    "body": [
+      "const [$1, set$1] = useState($2);"
+    ],
+    "description": "Adds basic syntax for useState with dynamic cursors"
+  },
+  "React useEffect": {
+    "scope": "typescriptreact,jsx",
+    "prefix": "ue",
+    "body": [
+      "useEffect(() => {",
+      "  $1",
+      "}, [$2]);"
+    ],
+    "description": "Adds basic syntax for useEffect with dynamic cursors"
+  },
+  "React useCallback": {
+    "scope": "typescriptreact,jsx",
+    "prefix": "ucb",
+    "body": [
+      "useCallback(() => {",
+      "  $1",
+      "}, [$2]);"
+    ],
+    "description": "Adds basic syntax for useCallback with dynamic cursors"
+  },
+  "React useMemo": {
+    "scope": "typescriptreact,jsx",
+    "prefix": "umm",
+    "body": [
+      "useMemo(() => {",
+      "  $1",
+      "}, [$2]);"
+    ],
+    "description": "Adds basic syntax for useMemo with dynamic cursors"
+  },
+  "Next.js 14 use client": {
+    "prefix": "nuc",
+    "body": [
+      "'use client';",
+      ""
+    ],
+    "description": "Adds a use client text. Should be added at the top of a client component"
+  },
+  "Jest basic test": {
+    "prefix": "jt",
+    "body": [
+      "import { render } from '@testing-library/react';",
+      "import { $1 } from '../my-component';",
+      "",
+      "describe('$1 Test') {",
+      "  it('should render correctly') {",
+      "    const { container } = render(<MyComponent />);",
+      "",
+      "    expect(container).toMatchSnapshot();",
+      "  }",
+      "}",
+      ""
+    ],
+    "description": "Creates a basic react testing library test file with a snapshot test for a component."
+  }
+}
